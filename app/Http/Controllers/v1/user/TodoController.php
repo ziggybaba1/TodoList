@@ -41,7 +41,7 @@ class TodoController extends Controller
                 }
                 return (SingleData::make($todos) )->additional(['message' => $message,'status'=>$status ])->response()->setStatusCode($status);
         }
-        catch (Exception $e) {
+        catch (\Exception $e) {
             return response()->json([
                 'message'    =>   $message,
                 'success'   =>  false,
@@ -68,7 +68,7 @@ class TodoController extends Controller
                 }
                 return (SingleData::make($todos) )->additional(['message' => $message ])->response()->setStatusCode($status);
         }
-        catch (Exception $e) {
+        catch (\Exception $e) {
             return response()->json([
                 'message'    =>   $message,
                 'success'   =>  false,
@@ -92,7 +92,7 @@ class TodoController extends Controller
                 }
             return (SingleData::make($todos) )->additional(['message' => $message ])->response()->setStatusCode($status);
         }
-        catch (Exception $e) {
+        catch (\Exception $e) {
             return response()->json([
                 'message'    =>   $message,
                 'success'   =>  false,
