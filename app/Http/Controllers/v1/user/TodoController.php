@@ -38,6 +38,7 @@ class TodoController extends Controller
                 if($todos)
                 {
                     $message = "Successful";
+                    $status = 200;
                 }
                 return (SingleData::make($todos) )->additional(['message' => $message,'status'=>$status ])->response()->setStatusCode($status);
         }
@@ -65,6 +66,7 @@ class TodoController extends Controller
                 if($todos)
                 {
                     $message = "Successful";
+                    $status = 200;
                 }
                 return (SingleData::make($todos) )->additional(['message' => $message ])->response()->setStatusCode($status);
         }
@@ -89,6 +91,7 @@ class TodoController extends Controller
                 if($todos)
                 {
                     $message = "Successful";
+                    $status = 200;
                 }
             return (SingleData::make($todos) )->additional(['message' => $message ])->response()->setStatusCode($status);
         }
